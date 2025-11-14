@@ -1,24 +1,59 @@
-﻿namespace InstaApp
+﻿using System.Collections.ObjectModel;
+
+using InstaApp;
+
+namespace InstaApp
 {
+    // Tworzenie modelu
+    public class Post
+    {
+        public string Nickname { get; set; } = "";
+        public string Avatar { get; set; } = "";
+        public string Date { get; set; } = "";
+        public string Picture { get; set; } = "";
+        public string Likes { get; set; } = "";
+        public string Comments { get; set; } = "";
+        public string Description { get; set; } = "";
+
+    }
+
     public partial class MainPage : ContentPage
     {
-        int count = 0;
+        public ObservableCollection<Post> data { get; set; }
 
         public MainPage()
         {
+            // Ładowanie danych z pliku 
+            LoadData();
             InitializeComponent();
+
+            ListaPostow.ItemsSource = data; // Bindowanie z poziomu
         }
 
-        private void OnCounterClicked(object? sender, EventArgs e)
+        async Task LoadData()
         {
-            count++;
+            using var stream = await FileSystem.OpenAppPackageFileAsync("posty.txt");
+            using var reader = new StreamReader(stream);
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+            var contents = reader.ReadToEnd();
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            // Zamiana zawartości na tablice wierszy z pliku
+            string[] rows = contents.Split("\n"); // Ładowanie danych z plików
+            foreach(string row in rows)
+            {
+                string[] dane = row.Split('\n');
+                data.Add(new Post
+                {
+                    Nickname = dane[0],
+                    Avatar = dane[1],
+                    Date = dane[2],
+                    Picture = dane[3],
+                    Likes = dane[4],
+                    Comments = dane[5],
+                    Description = dane[6]
+                });
+            }
+
         }
     }
 }

@@ -1,0 +1,7 @@
+kamil_dev;kamil.jpg;2025-11-05;worksetup.jpg;134;12;Nowy setup do kodzenia, w końcu mam porządny monitor 😎
+aga_photo;aga.jpeg;2025-11-04;sunset_lake.jpg;256;34;Złota godzina nad jeziorem — idealny moment na zdjęcie 🌅
+michal_gamer;michal.png;2025-11-03;gaming.png;478;56;Weekendowy grind w COD: BO6 🔥 Kto wchodzi na party?
+kasia_cook;kasia.jpg;2025-11-02;makaron.jpg;312;41;Makaron z domowym sosem pomidorowym — prosty, ale sztos 🍝
+darek_travel;darek.jpg;2025-11-01;tatry.jpg;603;77;Wyprawa w Tatry zaliczona! Widoki nie do opisania 🏔️
+ola_art;ola.jpg;2025-10-30;procreate.png;190;23;Nowa ilustracja zrobiona w Procreate 🎨 Co myślicie?
+lukasz_it;lukasz.jpg;2025-10-29;server_rack.jpg;87;9;Postawiłem nowy serwer na Debianie 💻 Wszystko śmiga jak złoto!
