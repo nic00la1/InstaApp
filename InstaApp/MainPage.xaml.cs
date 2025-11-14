@@ -19,7 +19,7 @@ namespace InstaApp
 
     public partial class MainPage : ContentPage
     {
-        public ObservableCollection<Post> data { get; set; }
+        public ObservableCollection<Post> data { get; set; } = [];
 
         public MainPage()
         {
