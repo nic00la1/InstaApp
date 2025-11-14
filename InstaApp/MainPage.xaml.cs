@@ -27,7 +27,7 @@ namespace InstaApp
             LoadData();
             InitializeComponent();
 
-            ListaPostow.ItemsSource = data; // Bindowanie z poziomu
+            ListaPostow.ItemsSource = data; // Bindowanie z poziomu kodu
         }
 
         async Task LoadData()

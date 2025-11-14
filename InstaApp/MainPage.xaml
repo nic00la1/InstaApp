@@ -7,7 +7,26 @@
         <CollectionView x:Name="ListaPostow">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    
+                    <Border StrokeShape="RoundRectangle 15" Padding="10" Margin="0, 5">
+                        <VerticalStackLayout>
+                            <!-- Awatar wraz z nickiem oraz datą dodania -->
+                            <HorizontalStackLayout>
+                                <!--Alternatywna-->
+                                <!--<Image Source="{Binding Avatar}" WidthRequest="40" HeightRequest="40">
+                                    <Image.Clip>
+                                        <EllipseGeometry Center="20,20" RadiusX="20" RadiusY="20"/>
+                                    </Image.Clip>
+                                </Image>-->
+                                <Border StrokeShape="RoundRectangle 20">
+                                    <Image Source="{Binding Avatar}" WidthRequest="40" HeightRequest="40" Aspect="AspectFill" />
+                                </Border>
+                                <VerticalStackLayout>
+                                    <Label Text="{Binding Nickname}" FontAttributes="Bold" FontSize="16"/>
+                                    <Label Text="{Binding Date}" FontSize="12" TextColor="#888"/>
+                                </VerticalStackLayout>
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
